@@ -7,7 +7,7 @@ if os.environ.get('DISPLAY','') == '':
     matplotlib.use('Agg')
 
 import numpy as np
-from scipy.ndimage import imread
+# from scipy.ndimage import imread
 from matplotlib import pyplot as plt
 
 sys.path += [os.path.abspath('.'), os.path.abspath('..')]  # Add path to root
@@ -49,7 +49,7 @@ def circle_levelset(shape, center, sqradius):
 def test_nodule():
     logging.info('running: test_nodule...')
     # Load the image.
-    img = imread(PATH_IMG_NODULE)[..., 0] / 255.0
+    img = plt.imread(PATH_IMG_NODULE)[..., 0] / 255.
     
     # g(I)
     gI = gborders(img, alpha=1000, sigma=5.48)
@@ -69,7 +69,7 @@ def test_nodule():
 def test_starfish():
     logging.info('running: test_starfish...')
     # Load the image.
-    imgcolor = imread(PATH_IMG_STARFISH) / 255.0
+    imgcolor = plt.imread(PATH_IMG_STARFISH) / 255.
     img = rgb2gray(imgcolor)
     
     # g(I)
@@ -90,7 +90,7 @@ def test_starfish():
 def test_lakes():
     logging.info('running: test_lakes...')
     # Load the image.
-    imgcolor = imread(PATH_IMG_LAKES)/255.0
+    imgcolor = plt.imread(PATH_IMG_LAKES) / 255.
     img = rgb2gray(imgcolor)
     
     # MorphACWE does not need g(I)
@@ -110,7 +110,7 @@ def test_lakes():
 def test_multi_lakes():
     logging.info('running: test_multi_lakes...')
     # Load the image.
-    imgcolor = imread(PATH_IMG_LAKES) / 255.0
+    imgcolor = plt.imread(PATH_IMG_LAKES) / 255.
     img = rgb2gray(imgcolor)
 
     # MorphACWE does not need g(I)
