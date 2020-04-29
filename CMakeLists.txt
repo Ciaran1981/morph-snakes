@@ -9,8 +9,8 @@ add_definitions(-std=c++11)
 
 add_executable(tests
     tests/tests.cpp
-    morphsnakes/include/ndimage.h
-    morphsnakes/include/narrowband.h
-    morphsnakes/include/morphsnakes.h
+    multisnakes/include/ndimage.h
+    multisnakes/include/narrowband.h
+    multisnakes/include/morphsnakes.h
 )
 target_link_libraries(tests ${CMAKE_THREAD_LIBS_INIT})

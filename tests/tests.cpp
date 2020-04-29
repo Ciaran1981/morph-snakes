@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <iostream>
 
-#include "morphsnakes/include/morphsnakes.h"
+#include "multisnakes/include/morphsnakes.h"
 
 #define cimg_display 0
 #include "CImg.h"

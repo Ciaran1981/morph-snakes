@@ -25,14 +25,14 @@ if sys.platform == 'darwin':
 numpy_include_dir = numpy.get_include()
 
 morphsnakes_module = Extension(
-    "morphsnakes._morphsnakes",
-    ["morphsnakes/src/_morphsnakes.pyx"],
+    "multisnakes._morphsnakes",
+    ["multisnakes/src/_morphsnakes.pyx"],
     language="c++",
     extra_compile_args=extra_compile_args,
-    include_dirs=[numpy_include_dir, os.path.join('morphsnakes', 'include')]
+    include_dirs=[numpy_include_dir, os.path.join('multisnakes', 'include')]
 )
 
-setup(name="MorphSnakes",
+setup(name="Multisnakes",
     version="1.0.1",
     description="Morphological Snakes",
     author="Pablo Márquez Neila",
@@ -58,7 +58,7 @@ setup(name="MorphSnakes",
         "Topic :: Multimedia :: Graphics :: 3D Modeling",
         "Topic :: Scientific/Engineering :: Image Recognition",
     ],
-    packages=["morphsnakes"],
+    packages=["multisnakes"],
     ext_modules=cythonize(morphsnakes_module),
     requires=['numpy', 'Cython'],
     setup_requires=['numpy', 'Cython']

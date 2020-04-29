@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from morphsnakes import _morphsnakes as _ms
+from multisnakes import _morphsnakes as _ms
 
 import logging
 import numpy as np
