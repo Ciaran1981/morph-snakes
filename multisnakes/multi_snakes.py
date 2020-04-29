@@ -9,9 +9,9 @@ import logging
 
 import numpy as np
 
-import morphsnakes
+import multisnakes
 
-DEFAULT_SNAKE = morphsnakes.MorphACWE
+DEFAULT_SNAKE = multisnakes.MorphACWE
 DEFAULT_PARAMS = dict(smoothing=1, lambda1=1, lambda2=1)
 
 
